@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ouro Preto - Patrimônio Barroco</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cor-fundo: #1c1c1c;
+      --cor-destaque: #e6c28b;
+      --cor-texto: #f5f5f5;
+      --cor-secundaria: #2f2f2f;
+      --cor-borda: #947347;
+      --font-titulo: 'Playfair Display', serif;
+      --font-texto: 'Libre Baskerville', serif;
+      --fonte-principal: "Inter", sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
+      font-family: var(--fonte-principal);
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: var(--cor-secundaria);
+      border-bottom: 2px solid var(--cor-borda);
+      padding: 2rem 5%;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
+
+    header h1 {
+      font-family: var(--font-titulo);
+      font-size: 3rem;
+      color: var(--cor-destaque);
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: var(--cor-texto);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--cor-destaque);
+    }
+
+    section.hero {
+      background: linear-gradient(rgba(28,28,28,0.8), rgba(28,28,28,0.9)), url('https://upload.wikimedia.org/wikipedia/commons/1/1a/Ouro_Preto_Igreja_Sao_Francisco_de_Assis.jpg') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    section.hero h2 {
+      font-family: var(--font-titulo);
+      font-size: 2.5rem;
+      color: var(--cor-destaque);
+      margin-bottom: 1rem;
+    }
+
+    section.hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    .btn {
+      background-color: var(--cor-destaque);
+      color: var(--cor-fundo);
+      padding: 0.75rem 2rem;
+      border: none;
+      font-size: 1rem;
+      margin-top: 2rem;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #d1aa6d;
+    }
+
+    section.content {
+      padding: 5rem 10%;
+      background-color: var(--cor-secundaria);
+    }
+
+    section.content h3 {
+      font-family: var(--font-titulo);
+      font-size: 2rem;
+      color: var(--cor-destaque);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    section.content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--cor-borda);
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: translateY(-20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ouro Preto</h1>
+    <nav>
+      <a href="#historia">História</a>
+      <a href="#arquitetura">Arquitetura</a>
+      <a href="#patrimonio">Patrimônio</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>A Jóia do Barroco Brasileiro</h2>
+    <p>Descubra a beleza artística e espiritual das igrejas e ruas históricas de Ouro Preto, Minas Gerais.</p>
+    <button class="btn">Explorar Agora</button>
+  </section>
+
+  <section id="historia" class="content">
+    <h3>História</h3>
+    <p>
+      Fundada no século XVII, Ouro Preto foi o centro da corrida do ouro no Brasil colonial. Suas ruas contam histórias de resistência, fé e arte, sendo um marco da Inconfidência Mineira e da cultura barroca.
+    </p>
+  </section>
+
+  <section id="arquitetura" class="content">
+    <h3>Arquitetura Barroca</h3>
+    <p>
+      Com construções assinadas por Aleijadinho e ornamentações de Mestre Ataíde, a cidade encanta com igrejas monumentais, praças de pedra e elementos ricos em simbologia católica e lusitana.
+    </p>
+  </section>
+
+  <section id="patrimonio" class="content">
+    <h3>Patrimônio Mundial</h3>
+    <p>
+      Ouro Preto é reconhecida pela UNESCO como Patrimônio Mundial desde 1980. Uma cidade viva, onde o passado pulsa em cada esquina e se transforma em inspiração para o presente.
+    </p>
+  </section>
+
+  <footer>
+    © <span id="ano"></span> Ouro Preto. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    document.getElementById("ano").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

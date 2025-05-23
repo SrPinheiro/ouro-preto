@@ -1,0 +1,44 @@
+:root {
+  --fonte-principal: "Inter", sans-serif;
+
+  --cor-fundo-claro: #f9fafb;
+  --cor-fundo-mais-claro: #f7fafc;
+  --cor-fundo-branco: #ffffff;
+
+  --cor-texto-escuro: #1a202c;
+  --cor-texto-medio: #4a5568;
+  --cor-texto-claro: #718096;
+  --cor-texto-suave: #a0aec0;
+
+  --cor-borda-clara: #e2e8f0;
+
+  --cor-azul-claro: #25baeb;
+
+  --sombra-leve: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --sombra-media: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  --padding-pequeno: 1rem;
+  --padding-medio: 1.5rem;
+  --padding-grande: 2.5rem;
+  --padding-extra: 3rem;
+
+  --margem-pequena: 0.25rem;
+  --margem-media: 0.5rem;
+  --margem-grande: 1em;
+
+  --fonte-tamanho-h1: 3.75rem;
+  --fonte-tamanho-h2: 2.25rem;
+  --fonte-tamanho-h3: 1.875rem;
+  --fonte-tamanho-p: 1.125rem;
+  --fonte-tamanho-base: 1rem;
+
+  --peso-fonte-normal: 400;
+  --peso-fonte-medio: 600;
+  --peso-fonte-negrito: 800;
+
+  --linha-altura-normal: 1.5;
+  --linha-altura-relaxada: 1.625;
+
+  --max-largura-conteudo: 48rem;
+  --max-largura-imagem: 62.5rem;
+}
