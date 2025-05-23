@@ -1,71 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ouro Preto</title>
-    <link rel="stylesheet" href="stylesheets/config.css" />
-    <link rel="stylesheet" href="stylesheets/global.css" />
-    <link rel="stylesheet" href="stylesheets/biblioteca.css" />
-    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-  </head>
-  <body>
-    <img src="images/land.jpg" alt="Vista de Ouro Preto" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ouro Preto - História</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #fff;
+      color: #000;
+    }
 
-    <header class="header">
-      <nav style="width: 100%">
-        <a href="#historia">História</a>
-        <a href="#arquitetura">Arquitetura</a>
-        <a href="#curiosidades">Curiosidades</a>
-      </nav>
-    </header>
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+    }
 
-    <section class="bg-gray-50">
-      <h2>Ouro Preto, História Viva do Brasil</h2>
-      <p>
-        Explore a cidade onde o passado colonial se encontra com a arte, a
-        cultura e a arquitetura barroca.
-      </p>
-    </section>
 
-    <section id="historia" class="bg-gray-100">
-      <h3>História</h3>
-      <p>
-        Ouro Preto foi o epicentro do ciclo do ouro no Brasil, no século XVIII.
-        Seu legado está ligado à Inconfidência Mineira e à riqueza arquitetônica
-        preservada até hoje, sendo um símbolo nacional de resistência e cultura.
-      </p>
-      <div class="m-top-g">
-        <a href="historia" class="botao">Ver mais</a>
-      </div>
-    </section>
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
 
-    <section id="arquitetura" class="bg-white">
-      <h3>Arquitetura</h3>
-      <p>
-        Com igrejas, museus e ruas de pedra, Ouro Preto preserva uma das maiores
-        coleções de arte barroca da América Latina, com destaque para obras de
-        Aleijadinho e Mestre Ataíde.
-      </p>
-      <div class="m-top-g">
-        <a href="/arquitetura" class="botao">Ver mais</a>
-      </div>
-    </section>
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4rem 6rem;
+    }
 
-    <section id="curiosidades" class="bg-gray-50">
-      <h3>Curiosidades</h3>
-      <ul>
-        <li>
-          Primeira cidade brasileira reconhecida pela UNESCO como Patrimônio
-          Mundial.
-        </li>
-        <li>Sede da UFOP, com rica produção cultural e acadêmica.</li>
-        <li>Localizada entre as montanhas da Serra do Espinhaço.</li>
-        <li>Palco do tradicional Festival de Inverno de Ouro Preto.</li>
-      </ul>
-      <div class="m-top-g">
-        <a href="/curiosidades" class="botao">Ver mais</a>
-      </div>
-    </section>
-  </body>
+    .text-section {
+      max-width: 40%;
+    }
+
+    .text-section h1 {
+      font-size: 3rem;
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+
+    .text-section p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .text-section button {
+      background: #d8a27b;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .image-section img {
+      max-width: 500px;
+      border: 1px solid #ccc;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .text-section, .image-section {
+        max-width: 100%;
+      }
+
+      .image-section img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+      <img src="images/logo.png" alt="logo">
+    <nav>
+      <a href="#">História</a>  
+      <a href="#">Pontos turísticos</a>
+      <a href="#">Sobre</a>
+      <a href="#">Cultura</a>
+      <a href="#">Eventos</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="text-section">
+      <h1>História</h1>
+      <p>Conheça a história da cidade</p>
+      <button>Conhecendo a história da cidade</button>
+    </div>
+    <div class="image-section">
+      <img src="/images/igreja.png" alt="Igreja histórica de Ouro Preto" />
+    </div>
+  </div>
+</body>
 </html>
